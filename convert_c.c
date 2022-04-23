@@ -1,10 +1,5 @@
 #include "main.h"
 
-/*
- * File: convert_c.c
- * Auth: Efa-Iwa Eleng
- */
-
 unsigned int convert_c(va_list args, buffer_t *output,
 		unsigned char flags, int wid, int prec, unsigned char len);
 unsigned int convert_percent(va_list args, buffer_t *output,

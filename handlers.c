@@ -1,11 +1,5 @@
 #include "main.h"
 
-/*
- * File: handlers.c
- * Auth: Efa-Iwa Eleng
- *       Babajide Kehinde
- */
-
 unsigned char handle_flags(const char *flag, char *index);
 unsigned char handle_length(const char *modifier, char *index);
 int handle_width(va_list args, const char *modifier, char *index);

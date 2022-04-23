@@ -1,11 +1,5 @@
 #include "main.h"
 
-/*
- * File: convert_hex.c
- * Auth: Efa-Iwa Eleng
- *	Babajide Kehinde
- */
-
 unsigned int convert_di(va_list args, buffer_t *output,
 		unsigned char flags, int wid, int prec, unsigned char len);
 unsigned int convert_b(va_list args, buffer_t *output,
@@ -40,11 +34,9 @@ unsigned int convert_di(va_list args, buffer_t *output,
 		d = va_arg(args, int);
 	if (len == SHORT)
 		d = (short)d;
-
 	/* Handle space flag */
 	if (SPACE_FLAG == 1 && d >= 0)
 		ret += _memcpy(output, &space, 1);
-
 	if (prec <= 0 && NEG_FLAG == 0) /* Handle width */
 	{
 		if (d == LONG_MIN)
@@ -58,7 +50,6 @@ unsigned int convert_di(va_list args, buffer_t *output,
 		count += (d < 0) ? 1 : 0;
 		count += (PLUS_FLAG == 1 && d >= 0) ? 1 : 0;
 		count += (SPACE_FLAG == 1 && d >= 0) ? 1 : 0;
-
 		/* Handle plus flag when zero flag is active */
 		if (ZERO_FLAG == 1 && PLUS_FLAG == 1 && d >= 0)
 			ret += _memcpy(output, &plus, 1);
